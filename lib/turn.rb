@@ -34,6 +34,10 @@ end
 
 def move(board, input, character = x)
   input_to_index(input)
-  valid_move(board, index)
-  board[index] = character
+  if valid_move(board, index)
+    board[index] = character
+    display_board
+  else
+    puts "Invalid move"
+  end
 end
