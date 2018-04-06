@@ -46,7 +46,7 @@ end
 def turn(board)
   puts "Please enter 1-9"
   input = gets.split
-  if input > 0 && input < 10
+  if 10 > input > 0
     move(board, input)
   else
     puts "Invalid entry"
