@@ -42,3 +42,7 @@ def move(board, user_input, character = x)
     puts "Invalid move"
   end
 end
+
+def turn(board)
+  puts "Please enter 1-9"
+end
