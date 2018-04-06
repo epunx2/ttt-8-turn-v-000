@@ -22,13 +22,13 @@ def position_taken?(board, index)
   end
 end
 
-def input_to_index(input)
-  if input == "" || input == " " || input == nil
-    input = -1
-    index = input
+def input_to_index(index)
+  if index == "" || index == " " || index == nil
+    index = -1
+  
     return index
   else
-    index = input.to_i
+    index.to_i
     index -= 1
   end
 end
@@ -45,8 +45,8 @@ end
 
 def turn(board)
   puts "Please enter 1-9"
-  input = gets.strip
-  input_to_index(input)
+  index = gets.strip
+  input_to_index(index)
   if 10 > index && index > 0
     move(board, index)
   else
