@@ -42,7 +42,7 @@ def move(board, index, character = x)
 end
 
 def turn(board)
-  puts "Please enter 1-9"
+  puts "Please enter 1-9:"
   input = gets.strip
   turn_index = input_to_index(input)
   if 10 > turn_index && turn_index > 0
