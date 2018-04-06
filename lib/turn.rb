@@ -24,7 +24,9 @@ end
 
 def input_to_index(user_input)
   if user_input == "" || user_input == " " || user_input == nil
-    return -1
+    user_input = -1
+    index = user_input
+    return index
   else
     user_input.to_i
     user_input = user_input - 1
