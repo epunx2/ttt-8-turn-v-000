@@ -1,34 +1,7 @@
 #!/usr/bin/env ruby
-def display_board(board)
-  print board
-end
-
-def valid_move?(board, index)
-  if position_taken? || index > 8
-    return false
-  else
-    return true
-  end
-end
-
-def position_taken?(board, index)
-  if board[index] == "" || board[index] == " " || board[index] == nil
-    return false
-  else
-    return true
-  end
-end
-
-def input_to_index(input)
-  if input == "" || input == " " || input == nil
-    return -1
-  else
-    input.to_i
-    index = input - 1
-    return input
-  end
-end
-
-def move(board, index, character = x)
-
-end
+require "...lib/turn.rb"
+board = 
+puts "Welcome to Tic Tac Toe"
+puts "Were would you like to go?(1-9)"
+index = gets.split
+move(board, index)
