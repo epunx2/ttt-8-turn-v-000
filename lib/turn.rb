@@ -22,19 +22,19 @@ def position_taken?(board, index)
   end
 end
 
-def input_to_index(user_input)
-  if user_input == "" || user_input == " " || user_input == nil
-    user_input = -1
-    index = user_input
+def input_to_index(input)
+  if input == "" || input == " " || input == nil
+    input = -1
+    index = input
     return index
   else
-    index = user_input.to_i
+    index = input.to_i
     index -= 1
   end
 end
 
-def move(board, user_input, character = x)
-  input_to_index(user_input)
+def move(board, input, character = x)
+  input_to_index(input)
   if valid_move?(board, index)
     board[index] = character
     display_board(board)
@@ -45,4 +45,11 @@ end
 
 def turn(board)
   puts "Please enter 1-9"
+  input = gets.split
+  if input > 0 && input < 10
+    move(board, input)
+  else
+    puts "Invalid entry"
+    turn(board)
+  end
 end
