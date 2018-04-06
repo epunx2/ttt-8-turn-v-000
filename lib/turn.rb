@@ -25,16 +25,15 @@ end
 def input_to_index(index)
   if index == "" || index == " " || index == nil
     index = -1
-  
+
     return index
   else
     index.to_i
-    index -= 1
+    index = index - 1
   end
 end
 
-def move(board, input, character = x)
-  input_to_index(input)
+def move(board, index, character = x)
   if valid_move?(board, index)
     board[index] = character
     display_board(board)
