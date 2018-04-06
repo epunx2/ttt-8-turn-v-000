@@ -22,12 +22,12 @@ def input_to_index(index)
   if index == "" || index == " " || index == nil
     return -1
   else
+    index -= 1
     index.to_i
   end
 end
 
 def move(board, index, character = x)
-  index -= 1
   input_to_index(index)
   valid_move(board, index)
   board[index] = character
