@@ -43,8 +43,8 @@ end
 
 def turn(board)
   puts "Please enter 1-9"
-  index = gets.strip
-  input_to_index(index)
+  input = gets.strip
+  input_to_index(input)
   if 10 > index && index > 0
     move(board, index)
   else
