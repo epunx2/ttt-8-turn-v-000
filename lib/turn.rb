@@ -22,13 +22,12 @@ def position_taken?(board, index)
   end
 end
 
-def input_to_index(index)
-  if index == "" || index == " " || index == nil
+def input_to_index(input)
+  if input == "" || input == " " || input == nil
     index = -1
     return index
   else
-    index.to_i
-    index -= 1
+    index = input.to_i - 1
   end
 end
 
