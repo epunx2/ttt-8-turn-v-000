@@ -1,5 +1,9 @@
 def display_board(board)
-  print board
+  puts line_one = " #{board[0]} | #{board[1]} | #{board[2]} "
+  puts line_two = "-----------"
+  puts line_three = " #{board[3]} | #{board[4]} | #{board[5]} "
+  puts line_four = "-----------"
+  puts line_five = " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
 def valid_move?(board, index)
