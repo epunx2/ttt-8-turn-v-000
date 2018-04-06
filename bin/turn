@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require "...lib/turn"
+require_relative "...lib/turn"
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 puts "Welcome to Tic Tac Toe"
 puts "Were would you like to go?(1-9)"
