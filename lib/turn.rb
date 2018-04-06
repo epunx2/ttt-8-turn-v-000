@@ -28,7 +28,7 @@ def input_to_index(user_input)
     index = user_input
     return index
   else
-    user_input.To_i
+    user_input.to_i
     user_input = user_input - 1
     index = user_input
   end
