@@ -28,9 +28,8 @@ def input_to_index(user_input)
     index = user_input
     return index
   else
-    user_input.to_i
-    user_input = user_input - 1
-    index = user_input
+    index = user_input.to_i
+    index -= 1
   end
 end
 
@@ -38,7 +37,7 @@ def move(board, user_input, character = x)
   input_to_index(user_input)
   if valid_move(board, index)
     board[index] = character
-    display_board
+    display_board(board)
   else
     puts "Invalid move"
   end
