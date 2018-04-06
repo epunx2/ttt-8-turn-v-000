@@ -22,18 +22,18 @@ def position_taken?(board, index)
   end
 end
 
-def input_to_index(input)
-  if input == "" || input == " " || input == nil
+def input_to_index(user_input)
+  if user_input == "" || user_input == " " || user_input == nil
     return -1
   else
-    input.to_i
-    input -= 1
-    index = input
+    user_input.to_i
+    user_input = user_input - 1
+    index = user_input
   end
 end
 
-def move(board, input, character = x)
-  input_to_index(input)
+def move(board, user_input, character = x)
+  input_to_index(user_input)
   if valid_move(board, index)
     board[index] = character
     display_board
