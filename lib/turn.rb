@@ -33,7 +33,7 @@ def input_to_index(input)
 end
 
 def move(board, input, character = x)
-  input_to_index(index)
+  input_to_index(input)
   valid_move(board, index)
   board[index] = character
 end
