@@ -7,7 +7,7 @@ def display_board(board)
 end
 
 def valid_move?(board, index)
-  if position_taken? || index > 8 || index > -1
+  if position_taken?(board, index) || index > 8 || index > -1
     return false
   else
     return true
@@ -35,7 +35,7 @@ end
 
 def move(board, user_input, character = x)
   input_to_index(user_input)
-  if valid_move(board, index)
+  if valid_move?(board, index)
     board[index] = character
     display_board(board)
   else
